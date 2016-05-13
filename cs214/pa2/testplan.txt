@@ -1,0 +1,77 @@
+
+By:
+Likitha Aineri and Krishna Yellayi
+
+TEST CASES 
+~~~~~~~~~~
+
+TEST 1: Null List 
+
+Test 2: Destroy the Null list
+Expected: The Null list should be destroyed 
+Result: NULL list is destroyed
+
+Test 2: Iterate an empty list
+Expected: nothing happens
+Result: nothing happens
+
+Test 3: Destroy the Null iterator
+Expected: The Null iterator should be destroyed
+Result: Null iterator is destroyed
+
+Test 4: Removing from an empty list
+Expected: Empty, nothing is removed. 
+Result: Empty, nothing is removed.
+
+Test 5: Adding a value before one item in a one item list
+Expected:
+Before list is: 1
+Try to add: 2
+After list is: 2, 1
+Result:list is 2, 1
+
+Test 6: Adding a value after one item in a one item list
+Expected:
+Before list is: 1
+Try to add: 0
+After list is: 1, 0
+Result:list is 1, 0
+
+TEST 4: NULL ITERATOR
+Test 2a: Call SLNextItem with NULL iterator
+Expected: nothing happens
+Result: nothing happens
+
+Test 12: Adding/Removing a value that is the same as the one item in a one item list
+Expected:
+Before list is: 5
+Try to add: 5
+After list is: 5, 5
+Then, remove both, so list is empty
+Result:list is 5, 5; after removal of both, list is empty
+
+Test 9: Inserting, iterating, and removing non-existent item from one item list
+Expected:
+Before list is: 1
+Iterator starts at the item and goes until it hits NULL, try to remove 2,
+which is non-existent
+After list is: 1
+Result: list is still 1; 2 cannot be removed if it doesn't exist
+
+Test 13: Insert and delete multiple items in a list and delete list
+Expected:
+Insert: 3, 6, 8, 4, 5, 8, 2
+After insertion, list is: 8, 7, 6, 5, 4, 3, 2
+Remove 5, 4, 8
+List becomes: 7, 6, 3, 2
+Insert 5
+List becomes: 7, 6, 5, 3, 2
+Result: list is 7, 6, 5, 3, 2
+
+Test 8: Inserting, iterating, and removing existing item from one item list
+Expected: 
+Before list is: 1
+Iterator starts at the item and goes until it hits NULL, 1 deletes
+After list is: empty
+Result:1 inserts into the list, and 1 is removed from the list.
+

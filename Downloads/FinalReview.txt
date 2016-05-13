@@ -1,0 +1,20 @@
+- Shell stuff
+- Semaphore stuff
+	-synch mech
+	 	- counter
+	 	- flag
+	- sem_wait
+	- sem_post
+	- no sense of owner
+- differences between semaphores/mutexes/condition variables
+- 2 coding questions (c)
+- playing with fork/exec
+- Shared Memory
+	- easiest question BKR can make
+- Deadlock concept
+	- how
+	- fix
+	- etc
+	- any mutex
+- NO PA6 STUFF
+- Question from Day 1

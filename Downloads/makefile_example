@@ -1,0 +1,28 @@
+CC = gcc
+CFLAGS = -g -Wall
+LFLAGS = -L/library_path #where the libraries are stored; 
+                         #assume there are three libraries: libtest1.so libtest2.a libtest3.so
+OUTPUT = out_executable
+OBJFILES = lib.o prog.o
+all: $(OUTPUT)
+
+###link all the .o file and two libraries libtest1.so libtest2.a
+###to generate out_executable###################################
+$(OUTPUT): $(OBJFILES)
+	$(CC) $(CFLAGS) $(OBJFILES) $(LFLAGS ) -ltest1 -ltest2 -o $(OUTPUT)   
+
+#############################################
+#lib.o: lib.c
+#	$(CC) $(CFLAGS) -c lib.c -o lib.o
+#prog.o: prog.c
+#	$(CC) $(CFLAGS) -c prog.c -o prog.o
+#######Can be replaced by following codes####
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+#$<: dependencies (%.c)	
+#$@: target (%.o)
+	
+clean:
+	rm *.o $(OUTPUT)
